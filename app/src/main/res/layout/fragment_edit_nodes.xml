@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_black"
+    tools:context=".ui.Fragments.CreateNodesFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnSaveNodes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="32dp"
+            android:clickable="true"
+            android:src="@drawable/ic_baseline_check_24"
+            app:backgroundTint="@color/red_primary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/EditTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/edittxt"
+            android:ems="10"
+            android:fontFamily="sans-serif-medium"
+            android:hint="Title"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            android:textColorHint="#D1D1D1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/EditSubTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edittxt"
+            android:ems="10"
+            android:fontFamily="sans-serif-medium"
+            android:hint="SubTitle"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            android:textColorHint="#D1D1D1"
+            app:layout_constraintEnd_toEndOf="@+id/EditTitle"
+            app:layout_constraintStart_toStartOf="@+id/EditTitle"
+            app:layout_constraintTop_toBottomOf="@+id/EditTitle" />
+
+        <EditText
+            android:id="@+id/EditNotes"
+            android:layout_width="0dp"
+            android:layout_height="350dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/edittxt"
+            android:ems="10"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="start"
+            android:hint="Notes"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            android:textColorHint="#D1D1D1"
+            app:layout_constraintEnd_toEndOf="@+id/EditSubTitle"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/EditSubTitle"
+            app:layout_constraintTop_toBottomOf="@+id/EditSubTitle" />
+
+        <ImageView
+            android:id="@+id/Edit_p_Red"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/reddot"
+            app:layout_constraintBottom_toTopOf="@+id/EditNotes"
+            app:layout_constraintStart_toStartOf="@+id/EditSubTitle"
+            app:layout_constraintTop_toBottomOf="@+id/EditSubTitle" />
+
+        <ImageView
+            android:id="@+id/Edit_p_Yellow"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:src="@drawable/yellowdot"
+            app:layout_constraintBottom_toBottomOf="@+id/Edit_p_Red"
+            app:layout_constraintStart_toEndOf="@+id/Edit_p_Red"
+            app:layout_constraintTop_toTopOf="@+id/Edit_p_Red" />
+
+        <ImageView
+            android:id="@+id/Edit_p_Green"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:src="@drawable/green_dot"
+            app:layout_constraintBottom_toBottomOf="@+id/Edit_p_Yellow"
+            app:layout_constraintStart_toEndOf="@+id/Edit_p_Yellow"
+            app:layout_constraintTop_toTopOf="@+id/Edit_p_Yellow"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
